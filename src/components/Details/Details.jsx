@@ -2,20 +2,19 @@ import React, { useState } from 'react';
 import MyGoogleMap from './MyGoogleMap/MyGoogleMap';
 import moment from 'moment';
 import { DetailsContainer } from './DetailsStyles';
-import LineChart from './LineChart/LineChart';
+import MyLineChart from './MyLineChart/MyLineChart';
 
 const Details = ({ data, speed }) =>  {
-        console.log(data);
-        const [tab, setTab] = useState('map');
-        const chartData = speed.map((el,i) => {
-            return {
-                speed: el,
-                time: moment(data[i].timestamp*1000).format('hh:mm:ss A')
-            }
-        })
+    const [tab, setTab] = useState('map');
+    const chartData = speed.map((el,i) => {
+        return {
+            speed: el,
+            time: moment(data[i].timestamp*1000).format('hh:mm:ss A')
+        }
+    })
 
-        return (
-            <DetailsContainer tab={tab}>
+    return (
+        <DetailsContainer tab={tab}>
             <div className='buttons'>
                 <div className='button btn-chart' onClick={() => setTab('chart')}>Chart</div>
                 <div className='button btn-map' onClick={() => setTab('map')}>Map</div>
@@ -28,9 +27,10 @@ const Details = ({ data, speed }) =>  {
                     containerElement={<div style={{ height: `45vh` }} />}
                     mapElement={<div style={{ height: `100%` }} />} 
                     data={data[0]}
-                /> : <LineChart id="linechart" data={chartData} speed={speed} />}
-            </DetailsContainer>
-        );
+                /> : 
+                <MyLineChart id="linechart" data={chartData} speed={speed} />}
+        </DetailsContainer>
+    );
 }
 
 export default Details;

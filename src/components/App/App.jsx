@@ -1,15 +1,15 @@
 import React, { useEffect, useReducer } from 'react';
 import axios from 'axios';
-import fetchDataReducer from '../../reducers/fetchDataReducer';
+import { fetchDataReducer, initialState } from '../../reducers/fetchDataReducer';
 import Distance from '../Distance/Distance';
 import Speed from '../Speed/Speed';
 import Loading from '../Loading/Loading';
 import { AppContainer } from './AppStyles';
 import Details from '../Details/Details';
 
-const initialState = {data: [], wholeDistance: 0, speed: [], timeout: 0};
 
-const App2 = () => {
+
+const App = () => {
   const [state, dispatch] = useReducer(fetchDataReducer, initialState);
 
   useEffect(
@@ -35,9 +35,7 @@ const App2 = () => {
           <Speed speed={state.speed[0]}/>
         </div>
         <div className='chart'>
-
-        <Details data={state.data} speed={state.speed}/>
-          
+          <Details data={state.data} speed={state.speed}/>  
         </div>
         <div className='distance'>
           <Distance distance={state.wholeDistance} />
@@ -48,4 +46,4 @@ const App2 = () => {
   )
 }
 
-export default App2;
+export default App;

@@ -3,16 +3,11 @@ import styled from 'styled-components';
 export const AppContainer = styled.div`
     width: 100vw; 
     height: 100vh; 
-    background: url('background.jpg') repeat; 
     overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-
-    @media (max-width:1024px) {
-
-    }
 
     .main-box {
         background-color: rgba(50, 50, 50, 0.7);
@@ -20,7 +15,7 @@ export const AppContainer = styled.div`
         padding-bottom: 5px;
         border-radius: 5px;
         width: 75vw;
-        height: 75vh;
+        height: fit-content;
         display: grid;
         grid-template-areas:
             'speed chart chart'
@@ -35,8 +30,6 @@ export const AppContainer = styled.div`
         @media (max-width: 1024px) {
             position: absolute;
             top: 5%;
-            height: fit-content;
-            /* margin-top: 50px; */
             grid-template-columns: 1fr;
             grid-template-areas:
                 'speed'

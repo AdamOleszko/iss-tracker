@@ -34,4 +34,4 @@ const Speed = ({ speed }) => {
     );
 }
 
-export default Speed ;
+export default Speed;

@@ -9,13 +9,13 @@ const Loading = () => {
 
     return (
         <LoadingContainer loaderWidth={loader}>
-        <h1>ISS Tracker</h1>
-        <p>Loading...</p>
-        <div className='container'>
-            <div className="progress">
-                <div className="progress-bar"></div>
+            <h1>ISS Tracker</h1>
+            <p>Loading...</p>
+            <div className='container'>
+                <div className="progress">
+                    <div className="progress-bar"></div>
+                </div>
             </div>
-        </div>
         </LoadingContainer>
     )
 }
