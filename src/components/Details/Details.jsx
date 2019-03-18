@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import MyGoogleMap from './MyGoogleMap/MyGoogleMap';
+import moment from 'moment';
 import { DetailsContainer } from './DetailsStyles';
 import LineChart from './LineChart/LineChart';
 
 const Details = ({ data, speed }) =>  {
+        console.log(data);
         const [tab, setTab] = useState('map');
         const chartData = speed.map((el,i) => {
             return {
                 speed: el,
-                time: i
+                time: moment(data[i].timestamp*1000).format('hh:mm:ss A')
             }
         })
 

@@ -20,6 +20,7 @@ const Speed = ({ speed }) => {
 
     return (
         <SpeedContainer unit={unit}>
+            <h1>ISS Tracker</h1>
             <p className="header">Current speed of ISS:</p>
             <div className="value">
                 {Math.round(newSpeed(speed) * 100) / 100} <span className="unit">{unit}</span>

@@ -8,9 +8,18 @@ export const SpeedContainer = styled.div`
     align-items: center;
     flex-direction: column;
     height: 100%;
+    text-align: center;
+
+    h1 {
+        @media (max-width: 1024px) {
+            font-size: 32px;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
 
     .header {
-        font: 50% italic;
+        font: 70% italic;
         text-align: center;
     }
 
@@ -70,11 +79,5 @@ export const SpeedContainer = styled.div`
         .kmh {
             background-color: ${props => props.unit === 'km/h' ? 'rgba(255,255,255,0.5)' : 'inherit'};
         }
-    }
-
-    .next {
-        font-size: 100%;
-        text-align: center;
-        margin-top: 30%;
     }
 `;

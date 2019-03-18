@@ -7,7 +7,7 @@ const fetchDataReducer = (state, action) => {
       case 'fullUpdate':
       return {
         data: [action.data].concat(state.data.filter((el, i) => {
-          return i<1
+          return i<19
         })),
         speed: 
           [calculateSpeed(

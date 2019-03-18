@@ -24,6 +24,7 @@ const Distance = ({ distance }) => {
             <div className='button m' onClick={() => setUnit('m')}>meters</div>
             <div className='button km' onClick={() => setUnit('km')}>kilometers</div>
         </div>
+        <p className='copy'>Copyright &copy; Adam Oleszko 2019</p>
         </DistanceContainer>
     )
 }

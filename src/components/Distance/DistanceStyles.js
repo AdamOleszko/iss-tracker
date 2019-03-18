@@ -21,6 +21,14 @@ export const DistanceContainer = styled.div`
         font-size: 24px;
     }
 
+    .copy {
+        font-size: 12px;
+        margin-top: 5px;
+        margin-bottom: 0;
+        align-self: flex-end;
+        justify-self: flex-end;
+    }
+
     .buttons {
         display: grid;
         margin-top: 20px;

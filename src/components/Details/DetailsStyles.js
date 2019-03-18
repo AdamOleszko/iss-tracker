@@ -9,6 +9,10 @@ export const DetailsContainer = styled.div`
         width: 100%;
         grid-template-columns: repeat(2,1fr);
         padding-left: 5px;
+
+        @media (max-width: 1024px) {
+            padding-left:0;
+        }
         
         .button {
             padding: 5px;
